@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/details.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/vue-material.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+
+
+    <div id="update">
+
+        <div class="title">Actualizare piece cu id-ul: {{ id }}</div>
+        
+        <ul class="user-list" >    
+          
+            <div class="spatiu">
+                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.name"><br>
+            </div>
+            <div class="spatiu">
+                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.artist"><br>
+            </div>
+            <div class="spatiu">
+                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.label"><br>
+            </div>
+            <div class="spatiu">
+                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.tracks"><br>
+            </div>
+            <div class="spatiu">
+                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.genre"><br>
+            </div>
+            <div class="spatiu">
+                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.year"><br>
+            </div>
+            <div class="spatiu">
+                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.price"><br>
+            </div>
+            <div class="spatiu">
+               <button v-on:click="update(piece.id)">Save</button>
+            </div>
+            <p>{{message}}</p>
+        </ul>
+      </div>
+
+    <script src="src/update.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+[
+    {
+        "id": 1,
+        "name": "Like O/Dining and Bar",
+        "artist": "Paleman",
+        "record label": "Swamp81",
+        "tracks number": "2",
+        "genre": "dubstep",
+        "year": "2015",
+        "price": "9 EUR"
+    },
+    {
+        "id": 2,
+        "name": "Tasty Witch",
+        "artist": "Headland",
+        "record label": "System Music",
+        "tracks number": "4",
+        "genre": "dubstep",
+        "year": "2019",
+        "price": "25 EUR"
+    },
+    {
+        "id": 3,
+        "name": "Shift",
+        "artist": "Commodo",
+        "record label": "Deep Medi Musik",
+        "tracks number": "2",
+       "genre": "dubstep,grime",
+        "year": "2014",
+        "price": "13 EUR"
+    },
+    {
+        "id": 4,
+        "name": "Loan Shark",
+        "artist": "Commodo",
+        "record label": "Black Acre",
+        "tracks number": "3",
+        "genre": "dubstep",
+        "year": "2020",
+        "price": "12 EUR"
+    },
+    {
+        "id": 5,
+        "name": "Fierce(Commodo remix)/S is for Snakes",
+        "artist": "Commodo",
+        "record label": "Bandulu Records",
+        "tracks number": "2",
+        "genre": "dubstep,grime",
+        "year": "2017",
+        "price": "11 EUR"
+    },
+    {
+        "id": 6,
+        "name": "Like A Nuclear Bomb",
+        "artist": "Egoless",
+        "record label": "Scrub a Dub",
+        "tracks number": "3",
+        "genre": "dub,dubstep",
+        "year": "2015",
+        "price": "11 EUR"
+    }
+    ,
+    {
+        "id": 7,
+        "name": "Heal",
+        "artist": "Karma",
+        "record label": "Innamind Recordings",
+        "tracks number": "3",
+        "genre": "dubstep,dub techno",
+        "year": "2015",
+        "price": "13 EUR"
+    },
+    {
+        "id": 8,
+        "name": "Return II Space",
+        "artist": "Digital Mystikz ‎",
+        "record label": "DMZ",
+        "tracks number": "6",
+        "genre": "dubstep",
+        "year": "2010",
+        "price": "33 EUR"
+    },
+    {
+        "id": 9,
+        "name": "Stand Against War / Maintain Thru Madness",
+        "artist": "Mala",
+        "record label": "DMZ",
+        "tracks number": "2",
+        "genre": "dubstep",
+        "year": "2012",
+        "price": "8 EUR"
+    },
+    {
+        "id": 10,
+        "name": "Sinners / Goblin",
+        "artist": "Johnny Clark vs Mala/Coki ‎",
+        "record label": "Ringo Recordings",
+        "tracks number": "2",
+        "genre": "dubstep",
+        "year": "2009",
+        "price": "10 EUR"
+    }
+  ]

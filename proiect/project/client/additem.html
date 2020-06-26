@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/details.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+    <div id="additem">
+
+        <h1 style="text-align: center;">Adaugare produs nou</h1>
+
+        <div v-if="piece.img !== undefined">
+            <img  v-bind:src="'data:image/png;base64,'+piece.img"  class="avatar img-circle img-thumbnail" alt="avatar">
+            </div>
+            <div v-if="piece.img === undefined">
+            <img  src="avatar.jpeg" class="avatar img-circle img-thumbnail" alt="avatar">
+            </div>
+            <input type="file" class="text-center center-block " @change="onFileSelected" accept="image/*">
+   
+            <div class="container">
+            <div class="custom"></div>
+            <div class="label">Name:</div>
+            <div class="value">
+                <input type="text" v-model="piece.name"></div>
+        </div>
+        <div class="container">
+            <div class="custom"></div>
+            <div class="label">Artist:</div>
+            <div class="value"><input type="text"  v-model="piece.artist"></div>
+        </div>
+        <div class="container">
+            <div class="custom"></div>
+            <div class="label">Label:</div>
+            <div class="value"><input type="text" v-model="piece.label"></div>
+        </div>
+        <div class="container">
+            <div class="custom"></div>
+            <div class="label">Tracks:</div>
+            <div class="value"><input type="text" v-model="piece.tracks"></div>
+        </div>
+        <div class="container">
+            <div class="custom"></div>
+            <div class="label">Genre:</div>
+            <div class="value"><input type="text" v-model="piece.genre"></div>
+        </div>
+        <div class="container">
+            <div class="custom"></div>
+            <div class="label">Relase Year:</div>
+            <div class="value"><input type="text" v-model="piece.year"></div>
+        </div>
+        <div class="container">
+            <div class="custom"></div>
+            <div class="label">Price:</div>
+            <div class="value"><input type="text" v-model="piece.price"></div>
+            
+        </div>
+        
+       
+        <button class="button"  v-on:click="add()">Add Item</button>
+    </div>
+    </div>
+    <script src="src/additem.js"></script>
+</body>
+
+</html>
