@@ -12,16 +12,25 @@
     padding:20px;
     flex:1;
     background-color:#fefefe;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .value {
        
     padding: 20px;
 
-    background-color: #aaa;
+    background-color:#0053c0;
     flex:1;
+    text-align: center;
+
 }
 .spatiu{
 
     padding-top: 10px;
 }
+input[type=text] {
+    color: #3CBC8D;
+    font-size: 18px;
+  }
+

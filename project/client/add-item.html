@@ -8,59 +8,65 @@
 </head>
 
 <body>
-    <a href="index.html">Home</a>
+        <a href="index.html">Home</a>
     <div id="add-item">
 
-        <h1 style="text-align: center;">Adaugare produs nou</h1>
-
-        <div v-if="piece.img !== undefined">
-            <img  v-bind:src="'data:image/png;base64,'+piece.img"  class="avatar img-circle img-thumbnail" alt="avatar">
+        <div class="title" style="text-align: center;">Add new item</div>
+        <div>
+            <div v-if="pizza_pic !== ''">
+                <img style="width: auto;height: 250px;margin-left: auto;margin-right: auto;display: flex;" v-bind:src="'data:image/png;base64,'+pizza_pic" >
+                </div>
+                <!--div v-if="pizza_pic === ''">
+                <img  src="avatar.png">
+                </div-->
+                <input style="display: flex;margin-left: auto;margin-right: auto;" type="file" class="text-center center-block " @change="onFileSelected" accept="image/*">
             </div>
-            <div v-if="piece.img === undefined">
-            <img  src="avatar.jpeg" class="avatar img-circle img-thumbnail" alt="avatar">
-            </div>
-            <input type="file" class="text-center center-block " @change="onFileSelected" accept="image/*">
-   
+            <div style="padding-top: 20px;"></div>
+        <div>
             <div class="container">
             <div class="custom"></div>
-            <div class="label">Name:</div>
+            <div class="label">Name :</div>
             <div class="value">
                 <input type="text" v-model="piece.name"></div>
         </div>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Format:</div>
+            <div class="label">Format :</div>
             <div class="value"><input type="text"  v-model="piece.format"></div>
         </div>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Processor socket:</div>
+            <div class="label">Processor socket :</div>
             <div class="value"><input type="text" v-model="piece.processor"></div>
         </div>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Producer:</div>
+            <div class="label">Producer :</div>
             <div class="value"><input type="text" v-model="piece.producer"></div>
         </div>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Graphic interface:</div>
+            <div class="label">Graphic interface :</div>
             <div class="value"><input type="text" v-model="piece.graphics"></div>
         </div>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Memory type:</div>
-            <div class="value"><input type="text" v-model="piece.memory"></div>
+            <div class="label">Memory type :</div>
+            <div class="value"><input type="text"  v-model="piece.memory"></div>
         </div>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Price:</div>
+            <div class="label">Price :</div>
             <div class="value"><input type="text" v-model="piece.price"></div>
             
         </div>
         
        
         <button class="button"  v-on:click="add()">Add Item</button>
+
+        <div style="padding-bottom: 5px;text-align: center;">
+            <p>{{message}}</p>
+        </div>
     </div>
     </div>
     <script src="src/add-item.js"></script>

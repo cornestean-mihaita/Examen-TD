@@ -1,6 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
-  margin-top: 100px;
+  margin-top: 20px;
+  background-image: url(https://previews.123rf.com/images/zven0/zven01603/zven0160300007/54795570-abstract-high-tech-background-in-white-and-gray-tones.jpg);
 }
 
 #app {

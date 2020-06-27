@@ -10,10 +10,11 @@
 <body>
     <a href="index.html">Home</a>
     <div id="details">
-        <div >
-        <img  v-bind:src="'data:image/png;base64,'+piece.img" >
-        </div>
-        <h1 style="text-align: center;">Detalii pentru produsul cu id-ul: {{ id }}</h1>
+        <div class="title" style="text-align: center;">Details for the item with id: {{ id }}</div>
+        <div>
+            <img style="margin-left: auto;margin-right:auto;display: flex;padding-bottom: 25px;padding-top: 25px;" v-bind:src="'data:image/png;base64,'+piece.img" >
+            </div>
+        
         <div class="container">
             <div class="custom"></div>
             <div class="label">Name:</div>
@@ -44,9 +45,12 @@
             <div class="label">Memory type:</div>
             <div class="value">{{piece.memory}}</div>
         </div>
-        
-        <div class="label">Price:</div>
-        <div class="value">{{piece.price}}</div>
+        <div class="container">
+            <div class="custom"></div>
+            <div class="label">Price:</div>
+            <div class="value">{{piece.price}}</div>
+        </div>
+        <div style="padding-top: 80px;"></div>
     </div>
     </div>
     <script src="src/details.js"></script>

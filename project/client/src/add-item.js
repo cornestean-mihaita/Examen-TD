@@ -4,7 +4,8 @@ function run() {
       data: {
         id: 'default',
         piece: {},
-        pizza_pic: '',
+        pizza_pic: '' ,
+        message: '',
       },
       created: function () {
 
@@ -16,10 +17,19 @@ function run() {
       },
       methods: {
           add:function(){
-            if(this.piece.img !=undefined){
+            console.log(this.piece)
+            if(this.piece.name !=undefined){
                 console.log(this.piece)
-            axios.put('http://localhost:3000/pieces', this.piece).then(response => { console.log(response) })
-            }  
+            axios.put('http://localhost:3000/pieces', this.piece).then(response => { console.log(response);
+            this.message=response.data;
+            })
+            }
+            else
+            /*{
+              setTimeout(() => {  this.message="add at least the name " }, 100);
+              setTimeout(() => {  this.message='' }, 2000);
+            }*/
+            this.message="You have to introduce a name.";  
         },
 
           onFileSelected(event) {
@@ -28,8 +38,8 @@ function run() {
             reader.onloadend = () => {
 
             var strImage = reader.result.replace(/^data:image\/[a-z]+;base64,/, "");
-            this.piece.img = strImage
-            
+            this.pizza_pic = strImage
+            this.piece.img=strImage
             }
             reader.readAsDataURL(this.selectedFile);
         },

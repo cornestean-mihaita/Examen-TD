@@ -13,7 +13,8 @@ api.get('/pieces', function (request, response) {
 
 api.get('/pieces/:id', function (request, response) {
   let piece = getpieceById(request.params.id);
-  if (piece) response.json(piece);
+  if (piece) response.json(piece); 
+  else
   response.json('not found');
 });
 
@@ -24,19 +25,12 @@ api.put('/pieces', function (request, response) {
 });
 
 api.post('/pieces/:id', function (request, response) {
-  // in request o sa-mi vina un obiect de tip car care o sa aiba un anumit id
-  
-  console.log(request.body,request.params.id);//un obiect de tipul car actualizat pe client
+  console.log(request.body,request.params.id);
   console.log(updatepieceById(request.body,request.params.id))
-  // citim cars din fisier pe baza id-ului primit de la client
-  // cautam daca exista indexul de pe request.body
-  // daca exista actualizam parametrii acestui produs/item
-  // salvam in fisier produsele actualizate
-  response.json('piece was saved succesfully');
+  response.json({status:'piece was saved succesfully'});
 });
 
 api.delete('/pieces/:index', function (request, response) {
-  // delete din fisier pe baza unui id
   console.log(request.params.index)
   pieces1.splice(request.params.index,1)
   const jsonString = JSON.stringify(pieces1,null,4)
@@ -74,12 +68,12 @@ function getpieces() {
 }
 
 function savepiece(piece) {
-  let pieces = getpieces();// citire json din fisier
-  let maxId = getMaxId(pieces);  // get maximum id form cars array
-  piece.id = maxId+1;// generare id unic
-  pieces.push(piece);// adaugare masina noua in array
+  let pieces = getpieces();
+  let maxId = getMaxId(pieces);
+  pieces.push(piece);
+  piece.id = maxId+1;
   try {
-    fs.writeFileSync(piecesFilepath, JSON.stringify(pieces,null,4));// salvare json array in fisier
+    fs.writeFileSync(piecesFilepath, JSON.stringify(pieces,null,4));
   } catch (err) {
     console.error(err)
   }
@@ -97,7 +91,7 @@ function getMaxId(pieces) {
 }
 
 function getpieceById(id){
-  let pieces = getpieces();// citire json din fisier
+  let pieces = getpieces();
   let selectedpiece = null;
   for(var i=0; i<pieces.length; i++) {
     if(id == pieces[i].id) selectedpiece = pieces[i];
@@ -106,14 +100,14 @@ function getpieceById(id){
 }
 
 function updatepieceById(data,id){
-  let pieces = getpieces();// citire json din fisier
+  let pieces = getpieces();
   console.log(data,id)
   for(var i=0; i<pieces.length; i++) {
     if(id == pieces[i].id)
      pieces[i]=data;
   }
   try {
-    fs.writeFileSync(piecesFilepath, JSON.stringify(pieces,null,4));// salvare json array in fisier
+    fs.writeFileSync(piecesFilepath, JSON.stringify(pieces,null,4));
   } catch (err) {
     console.error(err)
   }

@@ -15,33 +15,33 @@
 
     <div id="update">
 
-        <div class="title">Actualizare piece cu id-ul: {{ id }}</div>
+        <div class="title" style="text-align: center;">Update for the item with id: {{ id }}</div>
         
         <ul class="pieces-list" >    
           
-            <div class="spatiu">
-                <label for="name">Name</label>&nbsp;&nbsp;<input type="text" v-model="piece.name"><br>
+            <div class="container">
+                <label class="label">Name</label>&nbsp;&nbsp;<input class="value" type="text" v-model="piece.name"><br>
             </div>
-            <div class="spatiu">
-                <label for="name">Format</label>&nbsp;&nbsp;<input type="text" v-model="piece.format"><br>
+            <div class="container">
+                <label class="label">Format</label>&nbsp;&nbsp;<input class="value" type="text" v-model="piece.format"><br>
             </div>
-            <div class="spatiu">
-                <label for="name">Processor socket</label>&nbsp;&nbsp;<input type="text" v-model="piece.processor"><br>
+            <div class="container">
+                <label class="label">Processor socket</label>&nbsp;&nbsp;<input class="value" type="text" v-model="piece.processor"><br>
             </div>
-            <div class="spatiu">
-                <label for="name">Producer</label>&nbsp;&nbsp;<input type="text" v-model="piece.producer"><br>
+            <div class="container">
+                <label class="label">Producer</label>&nbsp;&nbsp;<input class="value" type="text" v-model="piece.producer"><br>
             </div>
-            <div class="spatiu">
-                <label for="name">Graphic interface</label>&nbsp;&nbsp;<input type="text" v-model="piece.graphics"><br>
+            <div class="container">
+                <label class="label">Graphic interface</label>&nbsp;&nbsp;<input class="value" type="text" v-model="piece.graphics"><br>
             </div>
-            <div class="spatiu">
-                <label for="name">Memory type</label>&nbsp;&nbsp;<input type="text" v-model="piece.memory"><br>
+            <div class="container">
+                <label class="label">Memory type</label>&nbsp;&nbsp;<input class="value" type="text" v-model="piece.memory"><br>
             </div>
-            <div class="spatiu">
-                <label for="name">Price</label>&nbsp;&nbsp;<input type="text" v-model="piece.price"><br>
+            <div class="container">
+                <label class="label">Price</label>&nbsp;&nbsp;<input class="value" type="text" v-model="piece.price"><br>
             </div>
-            <div class="spatiu">
-               <button v-on:click="update(piece.id)">Save</button>
+            <div class="container">
+               <button class="button" v-on:click="update(piece.id)">Save</button>
             </div>
             <p>{{message}}</p>
         </ul>
