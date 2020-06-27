@@ -20,15 +20,15 @@ api.get('/pieces/:id', function (request, response) {
 api.put('/pieces', function (request, response) {
   console.log(request.body)
   savepiece(request.body);
-  response.json('User was saved succesfully');
+  response.json('Hardware piece was saved succesfully');
 });
 
 api.post('/pieces/:id', function (request, response) {
-  // in request o sa-mi vina un obiect de tip piece piecee o sa aiba un anumit id
+  // in request o sa-mi vina un obiect de tip car care o sa aiba un anumit id
   
-  console.log(request.body,request.params.id);//un obiect de tipul piece actualizat pe client
+  console.log(request.body,request.params.id);//un obiect de tipul car actualizat pe client
   console.log(updatepieceById(request.body,request.params.id))
-  // citim pieces din fisier pe baza id-ului primit de la client
+  // citim cars din fisier pe baza id-ului primit de la client
   // cautam daca exista indexul de pe request.body
   // daca exista actualizam parametrii acestui produs/item
   // salvam in fisier produsele actualizate
@@ -52,10 +52,10 @@ api.delete('/pieces/:index', function (request, response) {
 	             )
   
   
-//const jsonString = JSON.stringify(pieces,null,4)
+//const jsonString = JSON.stringify(cars,null,4)
   
 
-  //response.json('piece with index ' + request.params.index + ' was deleted');
+  //response.json('Car with index ' + request.params.index + ' was deleted');
 });
 
 api.listen(3000, function () {
@@ -75,7 +75,7 @@ function getpieces() {
 
 function savepiece(piece) {
   let pieces = getpieces();// citire json din fisier
-  let maxId = getMaxId(pieces);  // get maximum id form pieces array
+  let maxId = getMaxId(pieces);  // get maximum id form cars array
   piece.id = maxId+1;// generare id unic
   pieces.push(piece);// adaugare masina noua in array
   try {

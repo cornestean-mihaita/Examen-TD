@@ -1,6 +1,6 @@
 function run() {
     new Vue({
-      el: '#additem',
+      el: '#add-item',
       data: {
         id: 'default',
         piece: {},

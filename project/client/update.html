@@ -17,28 +17,28 @@
 
         <div class="title">Actualizare piece cu id-ul: {{ id }}</div>
         
-        <ul class="user-list" >    
+        <ul class="pieces-list" >    
           
             <div class="spatiu">
-                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.name"><br>
+                <label for="name">Name</label>&nbsp;&nbsp;<input type="text" v-model="piece.name"><br>
             </div>
             <div class="spatiu">
-                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.artist"><br>
+                <label for="name">Format</label>&nbsp;&nbsp;<input type="text" v-model="piece.format"><br>
             </div>
             <div class="spatiu">
-                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.label"><br>
+                <label for="name">Processor socket</label>&nbsp;&nbsp;<input type="text" v-model="piece.processor"><br>
             </div>
             <div class="spatiu">
-                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.tracks"><br>
+                <label for="name">Producer</label>&nbsp;&nbsp;<input type="text" v-model="piece.producer"><br>
             </div>
             <div class="spatiu">
-                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.genre"><br>
+                <label for="name">Graphic interface</label>&nbsp;&nbsp;<input type="text" v-model="piece.graphics"><br>
             </div>
             <div class="spatiu">
-                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.year"><br>
+                <label for="name">Memory type</label>&nbsp;&nbsp;<input type="text" v-model="piece.memory"><br>
             </div>
             <div class="spatiu">
-                <label for="name">Nume</label>&nbsp;&nbsp;<input type="text" v-model="piece.price"><br>
+                <label for="name">Price</label>&nbsp;&nbsp;<input type="text" v-model="piece.price"><br>
             </div>
             <div class="spatiu">
                <button v-on:click="update(piece.id)">Save</button>

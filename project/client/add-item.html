@@ -9,7 +9,7 @@
 
 <body>
     <a href="index.html">Home</a>
-    <div id="additem">
+    <div id="add-item">
 
         <h1 style="text-align: center;">Adaugare produs nou</h1>
 
@@ -29,28 +29,28 @@
         </div>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Artist:</div>
-            <div class="value"><input type="text"  v-model="piece.artist"></div>
+            <div class="label">Format:</div>
+            <div class="value"><input type="text"  v-model="piece.format"></div>
         </div>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Label:</div>
-            <div class="value"><input type="text" v-model="piece.label"></div>
+            <div class="label">Processor socket:</div>
+            <div class="value"><input type="text" v-model="piece.processor"></div>
         </div>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Tracks:</div>
-            <div class="value"><input type="text" v-model="piece.tracks"></div>
+            <div class="label">Producer:</div>
+            <div class="value"><input type="text" v-model="piece.producer"></div>
         </div>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Genre:</div>
-            <div class="value"><input type="text" v-model="piece.genre"></div>
+            <div class="label">Graphic interface:</div>
+            <div class="value"><input type="text" v-model="piece.graphics"></div>
         </div>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Relase Year:</div>
-            <div class="value"><input type="text" v-model="piece.year"></div>
+            <div class="label">Memory type:</div>
+            <div class="value"><input type="text" v-model="piece.memory"></div>
         </div>
         <div class="container">
             <div class="custom"></div>
@@ -63,7 +63,7 @@
         <button class="button"  v-on:click="add()">Add Item</button>
     </div>
     </div>
-    <script src="src/additem.js"></script>
+    <script src="src/add-item.js"></script>
 </body>
 
 </html>

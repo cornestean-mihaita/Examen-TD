@@ -4,7 +4,7 @@
 <head>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
   <meta content="utf-8" http-equiv="encoding" />
-  <title>Users manager</title>
+  <title>Motherboards for sale</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/vue-material.css" />
@@ -17,16 +17,16 @@
 <body>
   <div id="app">
 
-    <div class="title">pieces</div>
+    <div class="title">Pieces</div>
 
     <p style="text-align: center" v-if="pieces.length == 0">No pieces found</p>
 
-    <ul class="user-list" v-if="pieces.length > 0">
+    <ul class="pieces-list" v-if="pieces.length > 0">
       <li>
-        <div class="user-row-header">
-          <div class="user-name">Name</div>
+        <div class="piece-row-header">
+          <div class="piece-name">Name</div>
 
-          <div class="user-city ">Price</div>
+          <div class="piece-price">Price</div>
           <button class="delete-btn  value_left" style="height: 25px; background-color: green;" v-on:click="addpiece()">Add Item</button>
           
         </div>

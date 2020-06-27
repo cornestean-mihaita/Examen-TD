@@ -19,7 +19,7 @@ function run() {
        // 
       },
       addpiece:function(){
-        window.open("additem.html","_self")
+        window.open("add-item.html","_self")
       }
 
     }
